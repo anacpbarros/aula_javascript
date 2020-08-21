@@ -9,15 +9,43 @@ function clicou(){
     //document.getElementById("agradecimento"); 
 
 // ou ainda, usar funções para injetar o HTML, então a tag (seja <h> ou <p>) no HTML não deve ter um texto
-    document.getElementById("agradecimento").innerHTML = " <b>Obrigado por clicar!</b>"; //sendo um HTML pode-se formatar o texto como quiser
+    document.getElementById("agradecimento").innerHTML = "<b>Obrigado por clicar!</b>"; //sendo um HTML pode-se formatar o texto como quiser
     
 }
 
-function redirecionar(){
-    window.open("https://digitalinnovation.one/");
-    //ou
-    window.location.href = "https://digitalinnovation.one/"; //aqui não é função apenas altera a referência
+function redirecionar() {
+    window.open("http://www.digitalinnovation.one/"); //abre em outra janela
 }
+    
+    //ou
+    //window.location.href = "http://www.digitalinnovation.one/"; //aqui não é função apenas altera a referências (redireciona para outro site na mesma janela)
+
+//function trocar() {
+    //alert ("Trocar texto");
+    //document.getElementById("mousemove").innerHTML = "Obrigado por passar o mouse"; 
+//nesse caso ele altera apenas o id selecionado <p id="mousemove" onmouseover="trocar()" onmouseout="voltar()">Passe o mouse aqui</p> 
+
+//outra opção para trabalhar com essas functions, seria não usar id, apenas elemento
+
+function trocar(elemento){
+    elemento.innerHTML = "Obrigado por passar o mouse";
+}
+
+//function voltar(){
+    //document.getElementById("mousemove").innerHTML = "Passe o mouse aqui";
+
+    function voltar(elemento){   
+    elemento.innerHTML = "Passe o mouse aqui";
+}
+
+function load(){
+    alert ("Página carregada");
+}
+
+function funcaoChange(elemento){
+    console.log(elemento.value);
+}
+    
 
 /*
 // se usar variável global e local com o mesmo nome,
